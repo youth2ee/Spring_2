@@ -3,11 +3,25 @@ package com.naver.s2;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+import org.springframework.stereotype.Component;
+
+@Component
 public class Car {
 	private Engine engine;
 	private Wheel wheel;
 	private ArrayList<String> name;
 	private HashMap<String, Integer> price;
+	
+	@PostConstruct //초기화메서드 지정
+	public void init() {
+	}
+	
+	@PreDestroy //종료메서드 지정
+	public void destroy() {
+	}
 	
 	public Car() {		
 	}
@@ -18,7 +32,6 @@ public class Car {
 		
 	}
 	
-
 	public HashMap<String, Integer> getPrice() {
 		return price;
 	}

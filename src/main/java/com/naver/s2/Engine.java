@@ -1,6 +1,10 @@
 package com.naver.s2;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Engine {
+	
 	private String fuel; //연료
 	private int hp; //마력
 	
